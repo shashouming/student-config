@@ -1,5 +1,7 @@
 server:
-  port: 8000  servlet:    context-path: /
+  port: 8000
+  servlet:
+    context-path: /
 spring:
   profiles: prod #配置生产环境
   datasource:
@@ -15,7 +17,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7000/eureka
+      defaultZone: http://localhost:7000/eureka,http://localhost:7001/eureka,http://localhost:7002/eureka
   instance:
     instance-id: provider-user-8000                #定义微服务的名称
     prefer-ip-address: true                        #是否显示IP和端口
@@ -45,7 +47,7 @@ mybatis-plus:
  eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7000/eureka
+      defaultZone: http://localhost:7000/eureka,http://localhost:7001/eureka,http://localhost:7002/eureka
   instance:
     instance-id: provider-user-8005                #定义微服务的名称
     prefer-ip-address: true                        #是否显示IP和端口
